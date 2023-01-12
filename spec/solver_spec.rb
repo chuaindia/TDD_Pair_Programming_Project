@@ -1,3 +1,5 @@
+require_relative '../solver'
+
 RSpec.describe Solver do
   context 'Factorial' do
     it 'Test : Factorial of a number' do
@@ -5,7 +7,7 @@ RSpec.describe Solver do
       expect(result.factorial(2)).to eq 2
       expect(result.factorial(6)).to eq 720
       expect(result.factorial(0)).to eq(1)
-      expect(result.factorial(-7)).to eq('Exceptional case')
+      expect(result.factorial(-7)).to eq('Factorial calculation is not applicable for negative numbers')
     end
   end
 
